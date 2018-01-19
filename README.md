@@ -11,9 +11,9 @@ MongoDB
 5. `vi /etc/paths` 就可以看到目录
 6. 前往文件夹`/usr/local/etc/mongod.conf`
 7. 打开终端，启动mongo`mongod —config /usr/local/etc/mongod.conf`
-8. 输入`brew services start mongodb`
-9. `mongo`
-10. 查看存在数据库命令`show dbs`，
+8. 打开另外一个终端，输入`brew services start mongodb`
+9. 链接mongo服务器的命令: `mongo`
+10. 查看存在数据库命令: `show dbs`，
 11. 查看数据库版本命令: `db.version()`
 12. dangdangdang---测试一下是否成功~~
 
