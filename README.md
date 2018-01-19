@@ -1,6 +1,26 @@
 # MongoDB
 MongoDB
 
+## Mac下面安装MongoDB
+-1. 可以参考： https://www.imooc.com/article/22733
+0. Mac 下安装 MongoDB 一般有两种方法，一种是通过源码安装，一种是直接使用 homebrew ，如果自带的有homebrew推荐使用 homebrew进行安装。
+1. 安装 homebrew ：`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+2. 使用 homebrew 安装 MongoDB ：
+`brew install mongodb`
+3. `echo $PATH`查看环境变量
+4. `vi /etc/paths` 就可以看到目录
+5. 前往文件夹`/usr/local/etc/mongod.conf`
+6. 打开终端，启动mongo`mongod —config /usr/local/etc/mongod.conf`
+7. 输入`brew services start mongodb`
+8. `mongo`
+9. 终端输入`show dbs`，测试一下是否成功~~
+
+
+
+
+
+
+
 ## 认识和安装MongoDB
 ###### 非关系数据库和关系型数据库的区别是什么？
   1. 实质：非关系型数据库的实质：非关系型数据库产品是传统关系型数据库的功能阉割版，通过减少用不到或很少用的功能，来大幅度提高产品性能。
