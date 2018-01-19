@@ -13,7 +13,9 @@ MongoDB
 7. 打开终端，启动mongo`mongod —config /usr/local/etc/mongod.conf`
 8. 输入`brew services start mongodb`
 9. `mongo`
-10. 终端输入`show dbs`，测试一下是否成功~~
+10. 查看存在数据库命令`show dbs`，
+11. 查看数据库版本命令: `db.version()`
+12. dangdangdang---测试一下是否成功~~
 
 
 
