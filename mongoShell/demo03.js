@@ -19,14 +19,18 @@ var db = connect('company');
 // print('[update]: The Date was update successfuly');
 
 
-// ====================1.$set修改器修改内嵌的数据==========================
+// ====================2.$set修改器修改内嵌的数据==========================
 // db.workMate.update({'name': 'wikiHong'}, {'$set': {'skill.skill3': 'WORD'}});
 // print('[update]: The Date was update successfuly');
 
-// ====================1.$unset将部分数据删除==========================
+// ====================3.$unset将部分数据删除==========================
 // db.workMate.update({'name': 'wikiHong'}, {'$unset': {'age': ''}});
 
-// ====================1.$set将部分数据恢复==========================
-db.workMate.update({'name': 'wikiHong'}, {'$set': {'age': '16'}});
+// ====================4.$set将部分数据恢复==========================
+// db.workMate.update({'name': 'wikiHong'}, {'$set': {'age': '16'}});
+
+// ====================5.$inc对数字进行计算,它是对value值的修改，但是修改的必须是数字，字符串是不起效果的。我们现在要对MiJie的年龄减去2岁，就可以直接用$inc来操作。====================
+db.workMate.update({'name': 'wikiHong'}, {'$inc': {'age': -2}});
+
 
 print('[update]: The Date was update successfuly');
