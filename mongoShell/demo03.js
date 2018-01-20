@@ -20,5 +20,9 @@ var db = connect('company');
 
 
 // ====================1.$set修改器修改内嵌的数据==========================
-db.workMate.update({'name': 'wikiHong'}, {'$set': {'skill.skill3': 'WORD'}});
+// db.workMate.update({'name': 'wikiHong'}, {'$set': {'skill.skill3': 'WORD'}});
+// print('[update]: The Date was update successfuly');
+
+// ====================1.$unset将部分数据删除==========================
+db.workMate.update({'name': 'wikiHong'}, {'$unset': {'age': ''}});
 print('[update]: The Date was update successfuly');
