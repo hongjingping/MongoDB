@@ -15,5 +15,10 @@ var db = connect('company');
 // print('[update]: The Date was update successfuly');
 
 // ===============1.$set修改器===================
-db.workMate.update({'name': 'wikiHong'}, {'$set': { 'sex': 2, age: 21}});
+// db.workMate.update({'name': 'wikiHong'}, {'$set': { 'sex': 2, age: 21}});
+// print('[update]: The Date was update successfuly');
+
+
+// ====================1.$set修改器修改内嵌的数据==========================
+db.workMate.update({'name': 'wikiHong'}, {'$set': {'skill.skill3': 'WORD'}});
 print('[update]: The Date was update successfuly');
