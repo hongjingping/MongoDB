@@ -39,6 +39,7 @@ var db = connect('company');
 // db.workMate.update({'name': 'xiaowang'}, {$set: {'age': '22'}}, {upsert: true})
 
 // =================7.push修饰符（增加选项）========================
-db.workMate.update({'name': 'xiaowang'}, {$push: {'insert': 'draw'}})
+// db.workMate.update({'name': 'xiaowang'}, {$push: {'insert': 'draw'}})
+db.workMate.update({'name': 'wikiHong'}, {$push: {'skill.skill4': 'draw'}})
 
 print('[update]: The Date was update successfuly');
