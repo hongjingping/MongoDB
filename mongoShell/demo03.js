@@ -36,7 +36,9 @@ var db = connect('company');
 // db.workMate.update({}, {$set: {insert: []}}, {multi: true})
 
 // ===================6. upsert新加一条数据=====================
-db.workMate.update({'name': 'xiaowang'}, {$set: {'age': '22'}}, {upsert: true})
+// db.workMate.update({'name': 'xiaowang'}, {$set: {'age': '22'}}, {upsert: true})
 
+// =================7.push修饰符（增加选项）========================
+db.workMate.update({'name': 'xiaowang'}, {$push: {'insert': 'draw'}})
 
 print('[update]: The Date was update successfuly');
