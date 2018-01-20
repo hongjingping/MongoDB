@@ -40,6 +40,14 @@ var db = connect('company');
 
 // =================7.push修饰符（增加选项）========================
 // db.workMate.update({'name': 'xiaowang'}, {$push: {'insert': 'draw'}})
-db.workMate.update({'name': 'wikiHong'}, {$push: {'skill.skill4': 'draw'}})
+
+// db.workMate.update({'name': 'wikiHong'}, {$push: {'skill.skill4': 'draw'}})
+
+// =================8.$ne修改前进行检查，有的话就不添加，没有的话才添加=================
+// db.workMate.update({'name': 'xiaowang', insert:{$ne: 'Game'}},{$push:{insert: 'playGame'}} )
+
+// =================9. addToset修改器=================8
+db.workMate.update({'name': 'xiaowang'}, {$addToSet:{ insert: 'readBook'}})
+
 
 print('[update]: The Date was update successfuly');
