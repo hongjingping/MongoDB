@@ -30,7 +30,13 @@ var db = connect('company');
 // db.workMate.update({'name': 'wikiHong'}, {'$set': {'age': '16'}});
 
 // ====================5.$inc对数字进行计算,它是对value值的修改，但是修改的必须是数字，字符串是不起效果的。我们现在要对MiJie的年龄减去2岁，就可以直接用$inc来操作。====================
-db.workMate.update({'name': 'wikiHong'}, {'$inc': {'age': -2}});
+// db.workMate.update({'name': 'wikiHong'}, {'$inc': {'age': -2}});
+
+// ===================6.multi选项给所有的加上新的字段=====================
+// db.workMate.update({}, {$set: {insert: []}}, {multi: true})
+
+// ===================6. upsert新加一条数据=====================
+db.workMate.update({'name': 'xiaowang'}, {$set: {'age': '22'}}, {upsert: true})
 
 
 print('[update]: The Date was update successfuly');
