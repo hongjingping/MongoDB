@@ -24,5 +24,9 @@ var db = connect('company');
 // print('[update]: The Date was update successfuly');
 
 // ====================1.$unset将部分数据删除==========================
-db.workMate.update({'name': 'wikiHong'}, {'$unset': {'age': ''}});
+// db.workMate.update({'name': 'wikiHong'}, {'$unset': {'age': ''}});
+
+// ====================1.$set将部分数据恢复==========================
+db.workMate.update({'name': 'wikiHong'}, {'$set': {'age': '16'}});
+
 print('[update]: The Date was update successfuly');
