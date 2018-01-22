@@ -35,6 +35,84 @@ var workMate3 = {
   'regardTime': new Date()
 }
 
+var workMate4 = {
+  'name': 'Ivan Jiao',
+  'age': 25,
+  'sex': 1,
+  'job': '前端架构师22',
+  'skill': {
+    'skill1': 'html+css',
+    'skill2': 'javascript',
+    'skill3': 'ps'
+  },
+  'regardTime': new Date()
+}
+
+var workMate5 = {
+  'name': 'Ivan Jiao',
+  'age': 25,
+  'sex': 1,
+  'job': '前端架构师22',
+  'skill': {
+    'skill1': 'html+css',
+    'skill2': 'javascript',
+    'skill3': 'ps'
+  },
+  'regardTime': new Date()
+}
+
+var workMate6 = {
+  'name': 'Ivan Jiao',
+  'age': 25,
+  'sex': 1,
+  'job': '前端架构师22',
+  'skill': {
+    'skill1': 'html+css',
+    'skill2': 'javascript',
+    'skill3': 'ps'
+  },
+  'regardTime': new Date()
+}
+
+var workMate7 = {
+  'name': 'Ivan Jiao',
+  'age': 25,
+  'sex': 1,
+  'job': '前端架构师22',
+  'skill': {
+    'skill1': 'html+css',
+    'skill2': 'javascript',
+    'skill3': 'ps'
+  },
+  'regardTime': new Date()
+}
+
+var workMate8 = {
+  'name': 'Ivan Jiao',
+  'age': 25,
+  'sex': 1,
+  'job': '前端架构师22',
+  'skill': {
+    'skill1': 'html+css',
+    'skill2': 'javascript',
+    'skill3': 'ps'
+  },
+  'regardTime': new Date()
+}
+
+var workMate9 = {
+  'name': 'Ivan Jiao',
+  'age': 25,
+  'sex': 1,
+  'job': '前端架构师22',
+  'skill': {
+    'skill1': 'html+css',
+    'skill2': 'javascript',
+    'skill3': 'ps'
+  },
+  'regardTime': new Date()
+}
+
 var db = connect('company');
 var workMateArray = [ workMate1, workMate2, workMate3 ];
 db.workMate.insert(workMateArray);

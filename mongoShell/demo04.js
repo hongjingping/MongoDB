@@ -3,7 +3,7 @@
 // var resultMessage = db.runCommand({ getLastErr: 1 });
 // printjson(resultMessage);
 
-// ====================14. findAndModify===============================
+// ====================14. findAndModify修改数据===============================
 var myModify = {
   findAndModify: 'workMate',
   query: { 'name': 'wikiHong' }, // 查找条件
