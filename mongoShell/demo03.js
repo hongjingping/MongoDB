@@ -54,6 +54,9 @@ var db = connect('company');
 // db.workMate.update({'name': 'xiaowang'}, {$addToSet:{ insert: {$each: interests}}})
 
 // ====================11. $pop (有两个选择，1表示从末端进行删除，-1从开始进行删除)===============================
-db.workMate.update({'name': 'xiaowang'}, {$pop: {'insert':1 }})
+// db.workMate.update({'name': 'xiaowang'}, {$pop: {'insert':1 }})
+
+// ======================12. 数组定位修改 ============================================
+db.workMate.update({'name': 'xiaowang'}, {$set: {'insert.2': 'code'}})
 
 print('[update]: The Date was update successfuly');
