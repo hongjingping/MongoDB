@@ -47,7 +47,10 @@ var db = connect('company');
 // db.workMate.update({'name': 'xiaowang', insert:{$ne: 'Game'}},{$push:{insert: 'playGame'}} )
 
 // =================9. addToset修改器=================8
-db.workMate.update({'name': 'xiaowang'}, {$addToSet:{ insert: 'readBook'}})
+// db.workMate.update({'name': 'xiaowang'}, {$addToSet:{ insert: 'readBook'}})
 
+// =================10.$each修改器(批量追加)=================9.
+var interests = ['sing', 'dance', 'code'];
+db.workMate.update({'name': 'xiaowang'}, {$addToSet:{ insert: {$each: interests}}})
 
 print('[update]: The Date was update successfuly');
