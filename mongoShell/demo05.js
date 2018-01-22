@@ -17,11 +17,20 @@
 // )
 
 // ============1. $in修饰符，一个key多个value的查询==================
-db.workMate.find({'age': {$in: [25,33]}},
-  { 'name': 1, 'skill.skill1': 1, 'age': 1, _id: 0}
-)
+// db.workMate.find({'age': {$in: [25,33]}},
+//   { 'name': 1, 'skill.skill1': 1, 'age': 1, _id: 0}
+// )
 
 // ===============2. $nin不包括================================
-db.workMate.find({'age': {$nin: [25,33]}},
+// db.workMate.find({'age': {$nin: [25,33]}},
+//   { 'name': 1, 'skill.skill1': 1, 'age': 1, _id: 0}
+// )
+
+// $or修饰符
+db.workMate.find(
+  { $or: [
+    { 'age': {$gte: 30}},
+    { 'skill.skill3': 'ps'}
+  ]},
   { 'name': 1, 'skill.skill1': 1, 'age': 1, _id: 0}
 )
