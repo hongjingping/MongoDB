@@ -34,3 +34,25 @@ db.workMate.find(
   ]},
   { 'name': 1, 'skill.skill1': 1, 'age': 1, _id: 0}
 )
+
+// $and修饰符
+db.workMate.find(
+  { $and: [
+    { 'age': {$gte: 30}},
+    { 'skill.skill3': 'ps'}
+  ]},
+  { 'name': 1, 'skill.skill1': 1, 'age': 1, _id: 0}
+)
+
+// $not修饰符查询条件之外的信息
+db.workMate.find(
+  { 
+    'age': {
+      $not: {
+        $lte: 30,
+        $gte: 1
+      }
+    }
+  },
+  { 'name': 1, 'skill.skill1': 1, 'age': 1, _id: 0}
+)
