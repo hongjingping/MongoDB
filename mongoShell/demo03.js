@@ -50,7 +50,10 @@ var db = connect('company');
 // db.workMate.update({'name': 'xiaowang'}, {$addToSet:{ insert: 'readBook'}})
 
 // =================10.$each修改器(批量追加)=================9.
-var interests = ['sing', 'dance', 'code'];
-db.workMate.update({'name': 'xiaowang'}, {$addToSet:{ insert: {$each: interests}}})
+// var interests = ['sing', 'dance', 'code'];
+// db.workMate.update({'name': 'xiaowang'}, {$addToSet:{ insert: {$each: interests}}})
+
+// ====================11. $pop (有两个选择，1表示从末端进行删除，-1从开始进行删除)===============================
+db.workMate.update({'name': 'xiaowang'}, {$pop: {'insert':1 }})
 
 print('[update]: The Date was update successfuly');
