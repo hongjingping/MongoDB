@@ -10,8 +10,18 @@
 //     {name:true,age:true,"skill.skill1":true,_id:false}
 // )
 
-var startDate = new Date('01/01/2018');
-db.workMate.find(
-  {'regardTime': {$gt: startDate}},
+// var startDate = new Date('01/01/2018');
+// db.workMate.find(
+//   {'regardTime': {$gt: startDate}},
+//   { 'name': 1, 'skill.skill1': 1, 'age': 1, _id: 0}
+// )
+
+// ============1. $in修饰符，一个key多个value的查询==================
+db.workMate.find({'age': {$in: [25,33]}},
+  { 'name': 1, 'skill.skill1': 1, 'age': 1, _id: 0}
+)
+
+// ===============2. $nin不包括================================
+db.workMate.find({'age': {$nin: [25,33]}},
   { 'name': 1, 'skill.skill1': 1, 'age': 1, _id: 0}
 )
