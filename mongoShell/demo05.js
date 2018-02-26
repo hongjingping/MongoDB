@@ -56,3 +56,28 @@ db.workMate.find(
   },
   { 'name': 1, 'skill.skill1': 1, 'age': 1, _id: 0}
 )
+
+// find()查找数据
+// db.workMate.find({skill:['swimming', 'javascript', 'html+css']},
+//  { name: true, skill: true, age: true, id: false}
+// )
+
+// $all数组多项查询
+db.workMate.find({skill:{$all: ['swimming', 'javascript', 'html+css']}},
+ { name: true, skill: true, age: true, _id: false}
+)
+
+// $in数组的或者查询
+db.workMate.find({skill:{$in: ['swimming', 'javascript', 'html+css']}},
+{ name: true, skill: true, age: true, _id: false}
+)
+
+// $size数组个数查询
+db.workMate.find({skill:{$size: 5}},
+{ name: true, skill: true, age: true, _id: false}
+)
+
+// $slice-显示选项
+db.workMate.find({},
+  {name: true, skill: {$slice: 2}, age: 1, _id: 0}
+)
