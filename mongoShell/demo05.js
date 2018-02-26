@@ -58,9 +58,9 @@ db.workMate.find(
 )
 
 // find()查找数据
-// db.workMate.find({skill:['swimming', 'javascript', 'html+css']},
-//  { name: true, skill: true, age: true, id: false}
-// )
+db.workMate.find({skill:['swimming', 'javascript', 'html+css']},
+ { name: true, skill: true, age: true, id: false}
+)
 
 // $all数组多项查询
 db.workMate.find({skill:{$all: ['swimming', 'javascript', 'html+css']}},
@@ -80,4 +80,17 @@ db.workMate.find({skill:{$size: 5}},
 // $slice-显示选项
 db.workMate.find({},
   {name: true, skill: {$slice: 2}, age: 1, _id: 0}
+)
+
+// sort
+// 分页,从小到大，显示2个
+db.workMate.find(
+  {},
+  {name: true, age: true, _id: 0}
+).limit(2).skip(0).sort({age:1})
+
+// $where 大于20岁的
+db.workMate.find(
+  {$where: "this.age > 20"},
+  {name: true, age: true, _id: 0}
 )
